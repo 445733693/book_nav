@@ -1,0 +1,5 @@
+*.epub
+.idea/
+__pycache__/
+*.zip
+book

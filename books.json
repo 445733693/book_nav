@@ -1,0 +1,17 @@
+[
+    {
+        "en": "investment",
+        "zh": "投资",
+        "books": [
+            ["xiaogouqianqian","小狗钱钱"],
+            ["fubabaqiongbaba","富爸爸穷爸爸"]
+        ]
+    },
+     {
+        "en": "politics",
+        "zh": "政治",
+        "books": [
+            ["zhongguolidaizhengzhideshi","中国历代政治得失"]
+        ]
+    }
+]
