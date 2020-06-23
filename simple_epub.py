@@ -5,6 +5,9 @@ import os
 import shutil
 import json
 from gen_html import parse_books
+from log import logger
+
+logger.info("开始打包电子书")
 
 title = '书籍导航'
 creator = '陈财建'
@@ -139,4 +142,4 @@ epubfile.close()
 
 shutil.rmtree("../tmp")
 
-print("Done")
+logger.info("完成！")

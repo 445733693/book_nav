@@ -43,7 +43,7 @@ class BookDetail:
         self.author = author
 
     def add_short_comment(self, short_comment):
-        self.short_comment.append(short_comment)
+        self.short_comments.append(short_comment)
 
     def add_comment(self, comment):
         self.comments.append(comment)
@@ -53,12 +53,12 @@ class DetailScraper:
     home_page = 'https://book.douban.com/'
 
     def __init__(self):
-        logger.info("==============ImgDownloader 开始初始化==============")
+        logger.info("==============DetailScraper 开始初始化==============")
         opts = Options()
         opts.headless = True
         self.browser = Firefox(options=opts)
         self.browser.get(self.home_page)
-        logger.info("==============ImgDownloader 初始化完毕==============")
+        logger.info("==============DetailScraper 初始化完毕==============")
 
     def get_detail(self, book_name):
         # 搜索
@@ -97,7 +97,6 @@ class DetailScraper:
             )
         # 获取书评
         reviews = self.browser.find_elements_by_css_selector('.main.review-item')
-        print(len(reviews))
         for review in reviews:
             name = review.find_element_by_class_name('name').text
             small_title = review.find_element_by_tag_name('h2').find_element_by_tag_name('a').text

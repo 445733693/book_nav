@@ -3,3 +3,5 @@
 __pycache__/
 *.zip
 book
+download.log
+geckodriver.log
