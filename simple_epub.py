@@ -4,6 +4,7 @@
 import os
 import shutil
 import json
+from gen_html import parse_books
 
 title = '书籍导航'
 creator = '陈财建'
@@ -77,6 +78,16 @@ for htmlitem in nav_list:
     manifest.append(item % {'id': file_name, 'url': file_name})
     ncx.append(itemref % {'id': file_name})
 
+books = parse_books()
+for category in books:#移动每本书的详情到临时目录
+    cate_en = category["en"]
+    for book in category["books"]:
+        pingyin = book[0]
+        file_name = cate_en + '_' + pingyin + '.html'
+        file_path = 'htmls/' + file_name
+        with open(file_path, 'r') as src, open('tmp/OPS/%s' % file_name, 'w') as dst:
+            dst.write(src.read())
+
 manifest='\n'.join(manifest)
 ncx='\n'.join(ncx)
 
@@ -102,14 +113,14 @@ ncx = '''<?xml version="1.0" encoding="utf-8"?>
 '''
 
 navpoint = '''<navPoint id='%s' class='level1' playOrder='%d'>
-<navLabel> <text>%s</text> </navLabel>
+<navLabel> <text>%d.%s</text> </navLabel>
 <content src='%s'/></navPoint>'''
 
 navpoints = []
 for i, htmlitem in enumerate(nav_list):
     file_name = htmlitem[0]
     zh = htmlitem[1]
-    navpoints.append(navpoint % (file_name, i+1, zh, file_name))
+    navpoints.append(navpoint % (file_name, i+1,i+1, zh, file_name))
 
 tmpfile = open('tmp/OPS/content.ncx', 'w')
 tmpfile.write(ncx % {

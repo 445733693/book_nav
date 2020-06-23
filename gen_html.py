@@ -48,10 +48,10 @@ def gen_nav(books):  # 生成一级目录html文件
         # if os.path.exists(file_path):
         #     continue
         book_html_list = []
-        for book in category["books"]:
+        for i, book in enumerate(category["books"]):
             pingyin = book[0]
             book_zh = book[1]
-            book_tag = '''<p><a href="%s.html">%s</a></p>''' % (pingyin, book_zh)
+            book_tag = '''<p><a href="%s.html">%d.%s</a></p>''' % (en+'_'+pingyin, i+1, book_zh)
             book_html_list.append(book_tag)
         content = html_template % (
             zh,
@@ -62,27 +62,30 @@ def gen_nav(books):  # 生成一级目录html文件
             f.write(content)
 
 
+def gen_book_detail(books): #生成每本书的详情html文件
+    for category in books:
+        cate_en = category["en"]
+        cate_name = cate_en + '.html'
+        for book in category["books"]:
+            pingyin = book[0]
+            zh = book[1]
+            file_name = cate_en + '_' + pingyin + '.html'
+            file_path = 'htmls/' + file_name
+            # if os.path.exists(file_path):
+            #     continue
+            back_url = '''<p><a href="%s">%s</a></p>''' % (cate_name, "返回上一层")
+            description = "这是书的简介"
+            detail = '''<p>%s</p>''' % description
+            content = html_template % (
+                zh,
+                zh,
+                "\n".join([back_url, detail, back_url])
+            )
+            with open(file_path,'w') as f:
+                f.write(content)
+
 books = parse_books()
 gen_nav_list(books)
 gen_nav(books)
+gen_book_detail(books)
 
-for category in books:
-    cate_en = category["en"]
-    cate_name = cate_en + '.html'
-    for book in category["books"]:
-        pingyin = book[0]
-        zh = book[1]
-        file_name = cate_en + '_' + pingyin + '.html'
-        file_path = 'htmls/' + file_name
-        # if os.path.exists(file_path):
-        #     continue
-        back_url = '''<p><a href="%s.html">%s</a></p>''' % (cate_name, "返回上一层")
-        description = "这是书的简介"
-        detail = '''<p>%s</p>''' % description
-        content = html_template % (
-            zh,
-            zh,
-            "\n".join([back_url, detail, back_url])
-        )
-        with open(file_path,'w') as f:
-            f.write(content)
