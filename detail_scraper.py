@@ -108,3 +108,6 @@ class DetailScraper:
                 Comment(name, small_title, content, up_vote_count, down_vote_count)
             )
         return book_detail
+
+    def close(self):
+        self.browser.close()

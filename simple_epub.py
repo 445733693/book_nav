@@ -6,6 +6,7 @@ import shutil
 import json
 from gen_html import parse_books
 from log import logger
+from gen_html import detail_scraper
 
 logger.info("开始打包电子书")
 
@@ -141,5 +142,5 @@ for d, ds, fs in os.walk('.'):
 epubfile.close()
 
 shutil.rmtree("../tmp")
-
+detail_scraper.close()
 logger.info("完成！")
