@@ -26,7 +26,7 @@ html_template = """
 """
 
 detail_scraper = DetailScraper()
-regen = True
+regen = False
 
 def parse_books():  # 解析books.json文件，获取分类以及所有书名
     with open('books.json', 'r') as f:

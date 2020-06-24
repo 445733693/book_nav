@@ -45,5 +45,25 @@
             ["liguangyaoguantianxia","李光耀观天下"],
             ["meiguoxianjing","美国陷阱 : 如何通过非商业手段瓦解他国商业巨头"]
         ]
+    },
+    {
+        "en": "relationship",
+        "zh": "人际关系",
+        "books": [
+            ["feibaoligoutong","非暴力沟通"],
+            ["qinmiguanxi","亲密关系"],
+            ["renxingderuodian","人性的弱点"],
+            ["zanyangyuzebei","赞扬与责备"],
+            ["qingmiguanxitongwanglinghundeqiaoliang","亲密关系：通往灵魂的桥梁"],
+            ["goutongdejishu","沟通的艺术"],
+            ["taidugaibianshehuiyingxiang","态度改变与社会影响"],
+            ["guanjianduihuaruhegaoxiao","关键对话 : 如何高效能沟通"],
+            ["tanhuadeliliang","谈话的力量"],
+            ["goutongeyishukanrurenli","沟通的艺术 : 看入人里，看出人外"],
+            ["yingxiangli","影响力"],
+            ["bieduziyongcan","别独自用餐"],
+            ["gaonandutanhua","高难度谈话"],
+            ["goutongshengjingtingshuoduxie","沟通圣经 : 听说读写全方位沟通技巧"]
+        ]
     }
 ]
