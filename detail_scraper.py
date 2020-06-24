@@ -69,7 +69,8 @@ class DetailScraper:
         time.sleep(3)
         # 获取标题（书名）
         items = self.browser.find_elements_by_class_name('sc-bZQynM')
-        a = items[0].find_element_by_class_name('title-text')
+        item = self.check_items(items)
+        a = item.find_element_by_class_name('title-text')
         title = a.text
         # 获取详情链接
         detail_url = a.get_attribute('href')
@@ -108,6 +109,16 @@ class DetailScraper:
                 Comment(name, small_title, content, up_vote_count, down_vote_count)
             )
         return book_detail
+
+    def check_items(self, items):
+        if len(items) == 0:
+            raise ValueError('items empty!')
+        for item in items:
+            if any(key in str(item.text).strip() for key in ['[豆瓣阅读作品]']):
+                continue
+            else:
+                return item
+        raise ValueError('all items have label!')
 
     def close(self):
         self.browser.close()

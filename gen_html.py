@@ -26,7 +26,7 @@ html_template = """
 """
 
 detail_scraper = DetailScraper()
-
+regen = True
 
 def parse_books():  # 解析books.json文件，获取分类以及所有书名
     with open('books.json', 'r') as f:
@@ -53,7 +53,7 @@ def gen_nav(books):  # 生成一级目录html文件
         zh = category["zh"]
         file_name = en + '.html'
         file_path = 'htmls/' + file_name
-        if os.path.exists(file_path):
+        if not regen and os.path.exists(file_path):
             continue
         book_html_list = []
         for i, book in enumerate(category["books"]):
@@ -81,7 +81,7 @@ def gen_book_detail_html(books):  # 生成每本书的详情html文件
             zh = book[1]
             file_name = cate_en + '_' + pingyin + '.html'
             file_path = 'htmls/' + file_name
-            if os.path.exists(file_path):
+            if not regen and os.path.exists(file_path):
                 continue
             back_url = '''<p><a href="%s">%s</a></p>''' % (cate_name, "返回上一层")
             book_detail = gen_book_detail(zh)
@@ -100,6 +100,8 @@ def gen_book_detail(book_name):
     content = []
     title = '''<h3>%s</h3>''' % book_detail.title
     content.append(title)
+    score = '''<h3>豆瓣评分：%s</h3>''' % book_detail.score
+    content.append(score)
     intro = '''<h4>内容简介</h4>\n<p>%s</p>''' % book_detail.intro
     content.append(intro)
     author = '''<h4>作者简介</h4>\n<p>%s</p>''' % book_detail.author
