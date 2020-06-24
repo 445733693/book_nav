@@ -65,5 +65,48 @@
             ["gaonandutanhua","高难度谈话"],
             ["goutongshengjingtingshuoduxie","沟通圣经 : 听说读写全方位沟通技巧"]
         ]
+    },
+    {
+        "en": "philosophy",
+        "zh": "哲学",
+        "books": [
+            ["xiaowangzi","小王子"],
+            ["beitaoyandeyongqiziwo","被讨厌的勇气 : “自我启发之父”阿德勒的哲学课"],
+            ["juwairen","局外人"],
+            ["renleijianshicongdongwu","人类简史 : 从动物到上帝"],
+            ["dongxueqian","洞穴奇案"],
+            ["renshengdezhihui","人生的智慧"],
+            ["shijiandezhixu","时间的秩序"],
+            ["zouchuweiyizhenliguan","走出唯一真理观"],
+            ["zhexuejiamendouganlexieshenme","哲学家们都干了些什么 : 史上最严谨又最不严肃的哲学史"],
+            ["muyangshaoniandeqihuanzhilv","牧羊少年奇幻之旅"],
+            ["tiancaizaizuofengzizaiyou","天才在左 疯子在右 : 国内第一本精神病人访谈手记"],
+            ["dawentijianmingzhexue","大问题 : 简明哲学导论"],
+            ["xidaduo","悉达多"],
+            ["bunengchengshoudeshengming","不能承受的生命之轻"],
+            ["yaoyuandejiushizhu","遥远的救世主"],
+            ["yueliangheliubianshi","月亮和六便士"],
+            ["zhongguozhexuejianshi","中国哲学简史"],
+            ["zhexuedegushi","哲学的故事"],
+            ["zuoweiyizhihebiaoxiangdeshijie","作为意志和表象的世界"]
+        ]
+    },
+    {
+        "en": "finance",
+        "zh": "金融",
+        "books": [
+            ["sulishiwodejingyanyujiao","苏世民：我的经验与教训"],
+            ["yuanze","原则"],
+            ["wenmingxianzaidaihuazhiyu","文明、现代化、价值投资与中国"],
+            ["zhaiwuweijiwodeyingdui","债务危机 : 我的应对原则"],
+            ["jingjixueyuanliweiguan","经济学原理 : 微观经济学分册"],
+            ["haiguijiaoyifaze","海龟交易法则"],
+            ["huobiquanliyuren","货币、权力与人 : 全球货币与金融体系的民本主义政治经济学"],
+            ["feiduichengfengxian","非对称风险 : 风险共担，应对现实世界中的不确定性"],
+            ["liangciquanqiudaweijide","两次全球大危机的比较研究"],
+            ["jinrongdeluoji","金融的逻辑"],
+            ["gupiaozuoshouhuiyilu","股票作手回忆录"],
+            ["gongsilicai","公司理财"]
+        ]
     }
 ]
