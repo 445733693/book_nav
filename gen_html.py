@@ -7,6 +7,7 @@ from detail_scraper import BookDetail
 from detail_scraper import ShortComment
 from detail_scraper import Comment
 from log import logger
+import os
 
 html_template = """
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
@@ -52,8 +53,8 @@ def gen_nav(books):  # 生成一级目录html文件
         zh = category["zh"]
         file_name = en + '.html'
         file_path = 'htmls/' + file_name
-        # if os.path.exists(file_path):
-        #     continue
+        if os.path.exists(file_path):
+            continue
         book_html_list = []
         for i, book in enumerate(category["books"]):
             pingyin = book[0]
@@ -80,8 +81,8 @@ def gen_book_detail_html(books):  # 生成每本书的详情html文件
             zh = book[1]
             file_name = cate_en + '_' + pingyin + '.html'
             file_path = 'htmls/' + file_name
-            # if os.path.exists(file_path):
-            #     continue
+            if os.path.exists(file_path):
+                continue
             back_url = '''<p><a href="%s">%s</a></p>''' % (cate_name, "返回上一层")
             book_detail = gen_book_detail(zh)
             content = html_template % (

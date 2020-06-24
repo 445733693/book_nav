@@ -68,14 +68,14 @@ class DetailScraper:
         search_button.submit()
         time.sleep(3)
         # 获取标题（书名）
-        items = self.browser.find_elements_by_class_name('title-text')
-        a = items[1]
+        items = self.browser.find_elements_by_class_name('sc-bZQynM')
+        a = items[0].find_element_by_class_name('title-text')
         title = a.text
         # 获取详情链接
         detail_url = a.get_attribute('href')
         self.browser.get(detail_url)
         # 获取豆瓣评分
-        score = self.browser.find_element_by_class_name('rating_num ').text
+        score = self.browser.find_element_by_class_name('rating_num').text
         # 获取书籍简介、作者简介
         intros = self.browser.find_elements_by_class_name('intro')
         intro = intros[0].text

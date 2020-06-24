@@ -4,14 +4,46 @@
         "zh": "投资",
         "books": [
             ["xiaogouqianqian","小狗钱钱"],
-            ["fubabaqiongbaba","富爸爸穷爸爸"]
+            ["fubabaqiongbaba","富爸爸穷爸爸"],
+            ["congmingdetouzizhe","聪明的投资者"],
+            ["qiongchalibaodian","穷查理宝典"],
+            ["zhishujijinzhinan","指数基金投资指南"],
+            ["touzizhongzuijiandandeshi","投资中最简单的事"],
+            ["touzizuizhongyaodeshi","投资最重要的事"],
+            ["fancuiruocongbuqueding","反脆弱 : 从不确定性中获益"],
+            ["zhaiwuweijiwode","债务危机 : 我的应对原则"],
+            ["shoubashoujiaoniducaibao","手把手教你读财报"],
+            ["langchaozhidian","浪潮之巅"],
+            ["suijimanbudeshagua","随机漫步的傻瓜"],
+            ["bafeitezhigudongdexin","巴菲特致股东的信"],
+            ["pidelinqidechenggongtouzi","彼得·林奇的成功投资"],
+            ["zhengquanfenxi","证券分析"],
+            ["yibenshududongcaibao","一本书读懂财报"],
+            ["weidadeboyi","伟大的博弈"],
+            ["caiwuziyouzhilu","财务自由之路"],
+            ["gushijinjiezhidao","股市进阶之道 : 一个散户的自我修养"],
+            ["jiedujijinwodetouzi","解读基金 : 我的投资观与实践"],
+            ["taobukaidejingjizhouqi","逃不开的经济周期 : 历史，理论与投资现实"]
         ]
     },
      {
         "en": "politics",
         "zh": "政治",
         "books": [
-            ["zhongguolidaizhengzhideshi","中国历代政治得失"]
+            ["1984","1984"],
+            ["zhongguolidaizhengzhideshi","中国历代政治得失"],
+            ["dongwunogchang","动物农场"],
+            ["wanlishiwunian","万历十五年"],
+            ["junzhulun","君主论"],
+            ["maozedongxuanji","毛泽东选集"],
+            ["qianguizezhongguolishide","潜规则 : 中国历史中的真实游戏"],
+            ["xuechoudinglv","血酬定律"],
+            ["dangquandedisandiguo","当权的第三帝国"],
+            ["mingyunwenzaiyinzizhuan","命运：文在寅自传"],
+            ["zhengzhizhixudeqiyuan","政治秩序的起源"],
+            ["minzhudexijiemeiguodangdai","民主的细节 : 美国当代政治观察随笔"],
+            ["liguangyaoguantianxia","李光耀观天下"],
+            ["meiguoxianjing","美国陷阱 : 如何通过非商业手段瓦解他国商业巨头"]
         ]
     }
 ]
